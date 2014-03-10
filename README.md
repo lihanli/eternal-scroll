@@ -5,10 +5,16 @@ Eternal Scroll
 
 A very simple infinite scroll library. You pass in your load more items button, when the button is x pixels away from being visible, it'll be clicked. 
 
-#### Usage
+#### Installation
 
 Download the dist/eternal-scroll.js file and add it to your page.
 
+Or install with bower:
+```
+$ bower install eternal-scroll
+```
+
+#### Usage
 ```javascript
 var eternalScroll = new EternalScroll({
   // the button you click on to load more items (required)
@@ -40,7 +46,7 @@ eternalScroll.setOn(true);
 eternalScroll.dom.loadMoreButton = $newEl;
 ```
 
-When your button is clicked on, it needs to either hide itself, set the 'disabled' attribute on itself, or the click handler should be modified to be a noop. If the button is hidden or disabled, the scroller won't click on it, otherwise if the user keeps scrolling while the button is visible it will keep getting clicked. I didn't add this functionality to the library because you should be already handling this for the buttons on your site to make sure the user doesn't click again when ajax is loading.
+When your button is clicked on, it needs to either hide itself, set the 'disabled' attribute on itself, or the click handler should be modified to be a noop. If the button is hidden or disabled, the scroller won't click on it, otherwise if the user keeps scrolling while the button is visible it will keep getting clicked. I didn't add this functionality to the library because you should already be handling this for the buttons on your site to make sure the user doesn't click again when ajax is loading.
 
 
 #### Requirements
