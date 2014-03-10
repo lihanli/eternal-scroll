@@ -33,6 +33,8 @@ class EternalScrollTest < CapybaraTestCase
     # turn scroller back on
     page.execute_script('scroller.setOn(true)')
     assert_has_css('#load-more')
+    scroll_to_top
+    sleep 0.5
     scroll_to_button
     assert_output('1')
   end
