@@ -6,6 +6,9 @@ Eternal Scroll
 A very simple infinite scroll library. You pass in your load more items button, when the button is x pixels away from being visible, it'll be clicked. 
 
 #### Usage
+
+Download the dist/eternal-scroll.js file and add it to your page.
+
 ```javascript
 var eternalScroll = new EternalScroll({
   // the button you click on to load more items (required)
