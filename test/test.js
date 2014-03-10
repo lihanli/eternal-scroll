@@ -11,7 +11,7 @@
       $('.spacers').append('<div class="spacer"></div>');
 
       times++;
-      $('.output').text(times);
+      $('#output').text(times);
     });
 
   window.scroller = new EternalScroll({
