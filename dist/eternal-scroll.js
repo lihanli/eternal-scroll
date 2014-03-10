@@ -37,7 +37,7 @@
   EternalScroll.prototype.setOn = function(onValue) {
     var self = this;
 
-    if onValue {
+    if (onValue) {
       self.dom.loadMoreButton.show();
       self.dom.window.on('scroll.eternalScroll', self.loadMore);
       self.dom.window.on('resize.eternalScroll', self.loadMore);
