@@ -46,7 +46,7 @@ eternalScroll.setOn(true);
 eternalScroll.dom.loadMoreButton = $newEl;
 ```
 
-When your button is clicked on, it needs to either hide itself, set the 'disabled' attribute on itself, or the click handler should be modified to be a noop. If the button is hidden or disabled, the scroller won't click on it, otherwise if the user keeps scrolling while the button is visible it will keep getting clicked. I didn't add this functionality to the library because you should already be handling this for the buttons on your site to make sure the user doesn't click again when ajax is loading.
+When your button is clicked on, it needs to either hide itself, set the 'disabled' attribute on itself, or the click handler should be modified to be a noop. If the button is hidden or disabled, the scroller won't click on it, otherwise if the user keeps scrolling while the button is visible it will keep getting clicked. You should already be handling this for the buttons on your site to make sure the user doesn't click again when ajax is loading.
 
 
 #### Requirements
