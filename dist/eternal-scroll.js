@@ -2,10 +2,10 @@
   'use strict';
 
   window.EternalScroll = function(opt) {
-    // options: threshold, loadMoreButton, throttle
-    if (opt == null) opt = {};
+    // options: threshold, loadMoreButton, throttle, on
     if (opt.threshold == null) opt.threshold = 200;
     if (opt.throttle == null) opt.throttle = 250;
+    if (opt.on == null) opt.on = true;
 
     var self = this;
     self.dom = {
@@ -21,7 +21,7 @@
 
           var windowTop = self.dom.window.scrollTop()
             , windowBottom = windowTop + self.dom.window.height()
-            , elementTop = $this.offset.top
+            , elementTop = $this.offset().top
             , elementBottom = elementTop + $this.outerHeight();
 
           return (elementBottom >= windowTop - opt.threshold) && (elementTop <= windowBottom + opt.threshold);
@@ -32,6 +32,8 @@
 
       self.loadMore = opt.throttle ? _.throttle(loadMore, opt.throttle) : loadMore;
     })();
+
+    self.setOn(opt.on);
   };
 
   EternalScroll.prototype.setOn = function(onValue) {
