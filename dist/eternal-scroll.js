@@ -17,7 +17,7 @@
       var loadMore = function() {
         var inview = self.dom.loadMoreButton.filter(function() {
           var $this = $(this);
-          if ($this.is(':hidden')) return;
+          if ($this.is(':hidden') || $this.attr('disabled') != null) return false;
 
           var windowTop = self.dom.window.scrollTop()
             , windowBottom = windowTop + self.dom.window.height()
