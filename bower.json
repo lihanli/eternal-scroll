@@ -1,0 +1,24 @@
+{
+  "name": "eternal-scroll",
+  "version": "0.0.1",
+  "homepage": "https://github.com/lihanli/eternal-scroll",
+  "authors": [
+    "Lihan Li <frankieteardrop@gmail.com>"
+  ],
+  "description": "simple infinite scroll",
+  "main": "./dist/eternal_scroll.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "dependencies": {
+    "jquery": ">= 1.7.2",
+    "underscore": ">= 1.0.0",
+  },
+  "devDependencies": {
+    "bootstrap": "latest"
+  }
+}
