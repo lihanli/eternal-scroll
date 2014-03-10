@@ -2,6 +2,8 @@ require 'wist'
 require 'capybara'
 require 'pry'
 require "minitest/autorun"
+require 'turn'
+Turn.config.format = :pretty
 
 class CapybaraTestCase < MiniTest::Unit::TestCase
   include Capybara::DSL
